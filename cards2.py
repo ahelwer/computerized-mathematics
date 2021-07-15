@@ -13,6 +13,7 @@ Color = Color.create()
 # Both decision tables can be though of as a function
 # that takes in a color and outputs a color
 
+# (the last field is the output type)
 #t1 is person 1's decision table
 t1 = Function('t1', Color, Color)
 #t2 is person 2's decision table
