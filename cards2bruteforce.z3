@@ -1,0 +1,33 @@
+(declare-datatypes () ((Suite Red Black)))
+(declare-datatypes (T1 T2) ((Pair (mk-pair (p1 T1) (p2 T2)))))
+(declare-const game1Input (Pair Suite Suite))
+(declare-const game1Output (Pair Suite Suite))
+(declare-const game2Input (Pair Suite Suite))
+(declare-const game2Output (Pair Suite Suite))
+(declare-const game3Input (Pair Suite Suite))
+(declare-const game3Output (Pair Suite Suite))
+(declare-const game4Input (Pair Suite Suite))
+(declare-const game4Output (Pair Suite Suite))
+
+(define-fun win
+  ((input (Pair Suite Suite))
+  (output (Pair Suite Suite))) Bool
+  (or (= (p1 input) (p1 output)) (= (p2 input) (p2 output)))
+)
+(assert (and (= (p1 game1Input) Red) (= (p2 game1Input) Red)))
+(assert (and (= (p1 game2Input) Red) (= (p2 game2Input) Black)))
+(assert (and (= (p1 game3Input) Black) (= (p2 game3Input) Red)))
+(assert (and (= (p1 game4Input) Black) (= (p2 game2Input) Black)))
+(assert (and
+  (win game1Input game1Output)
+  (win game2Input game2Output)
+  (win game3Input game3Output)
+  (win game4Input game4Output)
+))
+(assert (= (p1 game1Output) (p1 game3Output)))
+(assert (= (p1 game2Output) (p1 game4Output)))
+(assert (= (p2 game1Output) (p2 game2Output)))
+(assert (= (p2 game3Output) (p2 game4Output)))
+
+(check-sat)
+(get-model)
