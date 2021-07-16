@@ -1,0 +1,13 @@
+Say you and a friend are playing a game with cards.
+
+To begin, you both draw cards.
+You put your own card on your forehead, so the other player can see what you have (but you cannot see what your own card is)
+
+On the count of three (to prevent ANY, including nonverbal communication), you both say a card color.
+
+The game is won if either of you guess your own card's color correctly
+
+You may discuss strategy beforehand.
+
+
+What strategy, if any, gives a garunteed win state?

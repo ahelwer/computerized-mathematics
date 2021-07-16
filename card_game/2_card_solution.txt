@@ -1,0 +1,2 @@
+One player says the color of the card they see
+The other player says the opposite color of the card they see.
