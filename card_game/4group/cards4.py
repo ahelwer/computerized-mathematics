@@ -63,10 +63,3 @@ def game(p1, p2, p3, p4):
     print(f"p4\t{p4}\t{m.evaluate(t4(p1, p2, p3))}")
 
 #game(Suite.diam, Suite.spade, Suite.club, Suite.heart)
-
-
-def tb2():
-    for p1 in S:
-        for p3 in S:
-            for p4 in S:
-                print(f"({p1}, x, {p3}, {p4}) -> {m.evaluate(t1(p2, p3, p4))}")
