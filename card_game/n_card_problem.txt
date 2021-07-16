@@ -1,0 +1,12 @@
+See 2 card problem first.
+
+
+Your other friends want in on this game.
+
+Now, instead of 2 players guessing 2 colors,
+there are 4 players guessing 4 suites (same rules otherwise)
+
+is there a winning strategy?
+
+(generalize 2 or 4 to n)
+
